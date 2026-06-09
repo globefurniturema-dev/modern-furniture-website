@@ -48,10 +48,18 @@ Submissions POST to `https://formspree.io/f/mdawewgl`. To change the endpoint, u
 
 ## Git workflow
 
-Commit after every meaningful change with a descriptive message, then push to `origin/master`:
+**Commit and push after every meaningful unit of work** — do not batch multiple unrelated changes into one commit. This ensures we can always revert to a known-good state and never lose progress.
+
+After completing any change (new feature, content edit, bug fix, new page, image swap, etc.):
 ```
-git add <files>
-git commit -m "description of what changed and why"
+git add <specific files changed>
+git commit -m "short imperative summary of what changed and why"
 git push
 ```
+
+Commit message rules:
+- Start with an imperative verb: `Add`, `Update`, `Fix`, `Remove`, `Rename`
+- Describe *what* changed and *why* in one line (e.g. `Update dining page hero image to match spring campaign`)
+- Never use vague messages like `changes`, `update`, or `fix stuff`
+
 GitHub repo: https://github.com/globefurniturema-dev/modern-furniture-website
